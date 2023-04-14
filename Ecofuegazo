@@ -1,1 +1,31 @@
+//conectar a pins TX y RX del UNO
+void setup() 
+{
+Serial.begin(115200); // inicias serial acorde a velocidad del A6
+}
 
+void loop (){
+Serial.println ("Iniciando....");
+Serial.println( "AT"); //para iniciar los comandos del modulo GSM
+updateSerial(); //te muestra la respuesta del modulo a tu comando
+Serial.println("AT+CMGF=1"); //le dice que se configure para mandar mensajes de texto
+updateSerial();
+Serial.println("AT+CMGS=\"+50431937016\""); //aqui asignas el numero de celular
+updateSerial();
+Serial.println("La demencia encendio!.. BAD MONCHO 800000000000" );
+void updateSerial();
+Serial.println ( " :) " ); // carita feliz si todo salio bien
+//esto es para que se mande el mensaje al modulo
+}
+void updateSerial()
+{
+  delay(500);
+  while(Serial.available()) 
+  {
+    Serial.write(Serial.read());
+  }
+}
+
+
+// https://projecthub.arduino.cc/SetNFix/f8d5a17c-2635-41f6-a599-8dedc55a7132 //
+// https://learn.sparkfun.com/tutorials/reducing-arduino-power-consumption/all //
