@@ -27,5 +27,5 @@ void updateSerial()
 }
 
 
-// https://projecthub.arduino.cc/SetNFix/f8d5a17c-2635-41f6-a599-8dedc55a7132 //
-// https://learn.sparkfun.com/tutorials/reducing-arduino-power-consumption/all //
+// https://projecthub.arduino.cc/SetNFix/f8d5a17c-2635-41f6-a599-8dedc55a7132 // // tutorial modulo GSM //
+// https://learn.sparkfun.com/tutorials/reducing-arduino-power-consumption/all // // Metodos Arduino low Power //
